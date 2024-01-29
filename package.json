@@ -1,0 +1,27 @@
+{
+  "name": "mern-chat-app",
+  "version": "1.0.0",
+  "description": "Real time chat application using MERN Stack",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/praphul-kumar/MERN-chat-app.git"
+  },
+  "author": "Praphul Kumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/praphul-kumar/MERN-chat-app/issues"
+  },
+  "homepage": "https://github.com/praphul-kumar/MERN-chat-app#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.4.1",
+    "express": "^4.18.2",
+    "mongoose": "^8.1.1"
+  }
+}
