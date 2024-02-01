@@ -1,4 +1,6 @@
 const asyncHandler = require('express-async-handler');
+const bcryptjs = require('bcryptjs');
+const jwt = require('jsonwebtoken');
 const User = require('../models/UserModel');
 const { signUpSchema } = require('../helpers/validationSchema');
 const { errorHandler } = require('../utils/error.js');
@@ -23,7 +25,7 @@ exports.signUp = async (req, res, next) => {
         email: validationResult.email,
         password: hashedPassword
       });
-      
+
       if (createdUser) {
         const access_token = jwt.sign({ id: createdUser._id }, process.env.JWT_SECRET);
         const { password: pass, ...userWithoutPass } = createdUser._doc;
