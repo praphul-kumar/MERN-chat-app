@@ -1,6 +1,6 @@
 const Joi = require("joi");
 
-exports.authSchema = Joi.object({
+exports.signInSchema = Joi.object({
   email: Joi.string().email().lowercase().required(),
   password: Joi.string().min(8).required()
 });
